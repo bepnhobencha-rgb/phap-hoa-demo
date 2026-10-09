@@ -59,7 +59,7 @@ p{margin:0 0 1em}
 .hero{position:relative;color:#fff;isolation:isolate;overflow:hidden}
 .hero picture,.hero img.hero-img{position:absolute;inset:0;width:100%;height:100%}
 .hero img.hero-img{object-fit:cover;object-position:50% 40%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,18,8,.25) 0%,rgba(30,18,8,.55) 55%,rgba(30,18,8,.82) 100%);z-index:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,18,8,.68) 0%,rgba(30,18,8,.70) 55%,rgba(30,18,8,.82) 100%);z-index:0}
 .hero-in{position:relative;z-index:1;padding:clamp(6rem,18vw,11rem) 0 clamp(3rem,8vw,5rem)}
 .eyebrow{display:inline-block;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold-d)}
 .hero .eyebrow{color:#f6d78a}
@@ -187,7 +187,6 @@ details.cal[open]>summary::after{content:"–"}
 .give-btn:hover{background:var(--maroon-d);color:#fff}
 .give-btn[aria-current="page"]{outline:2px solid var(--gold);outline-offset:2px}
 .head-act{display:flex;align-items:center;gap:.6rem}
-@media (max-width:1200px){.nav-donate{display:none}}
 .btn-gold{background:linear-gradient(180deg,#e8c766,#c9a227);color:#3a2a04!important;border-color:transparent}
 .btn-gold:hover{background:linear-gradient(180deg,#f0d88a,#d4ae3a);color:#3a2a04}
 .btn-ghost-light{border:2px solid rgba(255,255,255,.75);color:#fff;background:transparent}
@@ -202,12 +201,12 @@ details.cal[open]>summary::after{content:"–"}
 @keyframes drift{to{transform:scale(1.12) translate3d(0,-1.5%,0)}}
 
 /* khối cảm xúc trang chủ */
-.give-home{position:relative;background:#3a140f;color:#fdf3e4;padding:0;overflow:hidden}
+.give-home{position:relative;background:var(--paper);color:var(--ink);padding:0;overflow:hidden;border-block:1px solid var(--line)}
 .give-home-in{display:grid;gap:clamp(1.5rem,4vw,3rem);align-items:center;padding:clamp(3rem,7vw,5.5rem) 0}
 @media (min-width:960px){.give-home-in{grid-template-columns:1.15fr .85fr}}
-.give-home h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.6rem)}
-.give-home p{color:#f6e6d4}
-.give-home .eyebrow{color:#f6d78a}
+.give-home h2{color:var(--ink);font-size:clamp(1.7rem,3.4vw,2.6rem)}
+.give-home p{color:var(--muted)}
+.give-home .eyebrow{color:var(--gold-d)}
 .give-home .btn-ghost-light{color:#fff}
 .facts{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.2rem 0 0;padding:0}
 .facts li{background:rgba(255,255,255,.08);border:1px solid rgba(246,215,138,.3);border-radius:14px;padding:.8rem .9rem;text-align:center}
@@ -215,7 +214,7 @@ details.cal[open]>summary::after{content:"–"}
 .facts span{font-size:.9rem;line-height:1.35}
 .give-home-photo{border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
 .give-home-photo img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.give-home figcaption{color:#e9d3c0;font-size:.9rem;padding:.5rem .1rem 0}
+.give-home figcaption{color:var(--muted);font-size:.9rem;padding:.5rem .1rem 0}
 
 .trust{display:flex;gap:.75rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;margin-top:1.2rem;color:var(--ink)}
 .trust svg{flex:none;width:26px;height:26px;color:var(--green);margin-top:.1rem}
@@ -344,3 +343,10 @@ button.btn{font:inherit;font-weight:600;cursor:pointer}
 .demo-ph{display:inline-block;color:#f6e3b0}
 .monthly .fund-note{margin:0 0 1.5rem}
 .prog-goal{padding-bottom:.4rem;border-bottom:1px dashed var(--line)}
+
+/* Quiet giving section below community activities and the monastery introduction. */
+.give-home .facts li{background:var(--ivory);border-color:var(--line)}
+.give-home .facts strong{color:var(--maroon)}
+.give-home-photo{box-shadow:var(--shadow)}
+.site-header :focus-visible,.give-home :focus-visible{outline-color:var(--maroon)}
+.hero :focus-visible{outline-color:#f6d78a}
